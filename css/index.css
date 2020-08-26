@@ -59,9 +59,6 @@ nav{
   padding: 1rem 0;
   transition: 1s;
 }
-.intro-head{
-  /* font-family: Roboto; */
-}
 .intro-pic{
   width: 100%;
   max-height: 40vh;
@@ -297,17 +294,16 @@ footer *{
     top: 50%;
     left: 50%;
     position: absolute;
-    height: 70vh;
     width: 730px;
   }
   
   .intro-pic{
     order: 2;
     width: 55%;
-    height: 60%;
+    height: 70%;
   }
   .intro h1, .intro h4{
-    margin: 1.3rem 0;
+    margin: 1rem 0;
   }
   .course{
     width: 46%;
