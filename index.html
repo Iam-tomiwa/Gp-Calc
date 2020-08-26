@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/all.css" type="text/css" media="all" /> 
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" type="text/css" media="all" /> -->
+  <link rel="icon" type="image/gif/png" hef="images/logo.png">
+  <title>GP calc</title>
+</head>
+<body>
+  <nav>
+    <img class="logo" src="images/logo1.png" alt="Gp calc logo" />
+    <a href="#" id="new-btn"><i class="fa fa-home"></i> Home</a>
+  </nav>
+  <div class="container">
+    <div class="wrapper">
+      <div class="intro">
+        <img class="intro-pic" src="images/illustration.png" alt="" />
+        <div>
+        <h1 class="intro-head">Monitor your GPA with <span class="color">GP CALC+</span></h1>
+        <h4>Pls input the number of courses offerred to continue</h4>
+        <div class="num-wrapper">
+          <input type="number" class="course-num" value="" placeholder="Enter no of courses here..."/>
+          <button type="submit" class="start-btn">Start <i class="fa fa-angle-double-right"></i></button>
+        </div>
+          <p class="error"></p>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+    <form action="" method="get" accept-charset="utf-8">
+      <p class="text"></p>
+      <div class="course">
+          <label for="course">Units: </label>
+          <input type="number" max-length="2" class="course-unit" placeholder="Enter course unit" required="required"/>
+          <label for="grade">Grade:</label>
+          <select class="grade" required>
+            <option value="5">A</option>
+            <option value="4">B</option>
+            <option value="3">C</option>
+            <option value="2">D</option>
+            <option value="1">E</option>
+            <option value="0">F</option>
+          </select>
+      </div>
+    </form>
+    <div class="btns">
+      <a class="calc" href="#"><i class="fas fa-calculator socials"></i>&ThickSpace; Calculate</a>
+    </div>
+    </div>
+  </div>
+  <div class="overlay1"></div>
+  <div class="alert-box">
+    <img src="images/alert.jpg" id="alert-logo" alt="Gp Calc's logo">
+    <h2 id="gpa"></h2>
+    <h4>Thank you for using Gp Calc+ &ThickSpace;<i class="fa fa-heart"></i>...</h4>
+    <a href="#" class="close">Close</a>
+  </div>
+  <footer class="footer-1" id="footer">
+    <p>Designed and developed with<i class="fa fa-heart"></i>by Tomiwa</p>
+    <div class="socials">
+      <a href="https://wa.me/+2348154050552"><i class="fab fa-whatsapp icons"></i></a>
+      <a href="#"><i class="fab fa-facebook icons"></i></a>
+      <a href="https://github.com/Iam-tomiwa"><i class="fab fa-github icons"></i></a>
+      <a href="https://www.twitter.com/tomiwa_creates/"><i class="fab fa-twitter icons"></i></a>
+      <a href="https://www.instagram.com/tomiwa_creates/"><i class="fab fa-instagram icons"></i></a>  
+    </div>
+    <p>&copy; 2020 | GP Calc+</p>
+  </footer> 
+  <script src="js/index.js"></script>
+</body>
+</html>
