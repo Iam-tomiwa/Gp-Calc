@@ -4,6 +4,9 @@
   --sec-color: #795548;
   scroll-behavior: smooth;
 }
+html{
+  font-size: 14px;
+}
 *{
   margin: 0;
   padding: 0;
@@ -22,6 +25,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  z-index: 10;
 }
 .logo{
   width: 140px;
@@ -61,13 +65,16 @@ nav{
 }
 .intro-pic{
   width: 100%;
-  max-height: 40vh;
+  max-height: 300px;
   min-height: 200px;
   margin: 1rem 0;
 }
 .intro-head, h4, .text{
-  padding: .7rem 0;
+  margin: .7rem 0;
   color: var(--sec-color);
+}
+h4{
+  margin: 1rem 0;
 }
 .error{
   color: #ff0000;
@@ -80,7 +87,6 @@ span{
 .forms{
   transform: translatex(-160vw);
   transition: 1s;
-  /* overflow: scroll; */
   max-width: 500px;
   margin: 0 auto;
 }
@@ -138,6 +144,20 @@ label{
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+.error-msg{
+  color: red; 
+  background: #ff00004f;
+  border-radius: 5px; 
+  margin: .5rem 0;
+  padding: .5rem 1rem;
+  animation: error 8s ease-in-out forwards;
+  display: none;
+}
+@keyframes error{
+  from{ opacity: 1;}
+  to{ opacity: 0;}
 }
 .overlay1{
   display: none;
@@ -259,14 +279,13 @@ footer *{
 .socials *{
   margin: 0 .4rem;
 }
-@media (min-width: 760px){
+@media screen and (min-width: 760px){
   .intro, .forms{
     border-radius: 30px;
     background:  #fff;
     box-shadow: 3px 4px 20px rgba(0,0,0,0.16);
     padding: 2.5rem;
     margin: 1rem 0 4rem 0;
-    max-width: inherit;
   }  
   body::after{
     content: '';
@@ -294,22 +313,23 @@ footer *{
     top: 50%;
     left: 50%;
     position: absolute;
-    width: 730px;
+    width: 630px;
+    max-height: 70vh;
   }
-  
+  .container{
+    margin-bottom: 2rem;
+  }
   .intro-pic{
     order: 2;
-    width: 55%;
-    height: 70%;
-  }
-  .intro h1, .intro h4{
-    margin: 1rem 0;
+    width: 50%;
+    min-height: 300px;
   }
   .course{
     width: 46%;
   }
-  .container{
-    margin: auto;  
+  nav, .intro, .forms{
+    max-width: 700px;
+    margin: 0 auto;  
   }
   form{
     display: flex;

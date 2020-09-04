@@ -16,14 +16,21 @@ const formWrap = document.querySelector('.forms');
 
 /////just a little function to initialise the calculator's forms...
 
+
+errorMsg=(message, i)=>{ 
+  let error = document.querySelectorAll('.error-msg')[i];
+  error.textContent = `*pls input ${message}`;
+  error.style.display = 'block';
+}
+
 loopForm=()=>{
-  let courseNumber = Number(courseNum.value);
   let welcome = document.querySelector('.text');
+  let courseNumber = Number(courseNum.value);
   if (courseNumber > 0) {
     intro.style.display = 'none';
-    formWrap.style.transform = 'translatex(0vw)';
-    for(var i = 1; i < courseNum.value; i++){
+    formWrap.style.cssText = 'transform: translatex(0vw); transition: 1s;';
     welcome.textContent =  `Hi there!, You have ${courseNumber} course forms here, pls input all your course units and grades before procceeding to calculate.`;
+    for(var i = 1; i < courseNum.value; i++){
     let courseClone = course.cloneNode(true);
     form.appendChild(courseClone);
     }
@@ -32,8 +39,7 @@ loopForm=()=>{
       footer.style.position = 'absolute';
     }
   } else {
-    let text = document.querySelector('.error');
-    text.textContent = `*pls input valid number`;
+    errorMsg('a valid number', 0);
   }
 }
 
@@ -60,7 +66,7 @@ calcBtn.addEventListener('click', () => {
   }//get all the values of the course units and push them into an array
   
   for (var i = 0; i < unitVal.length; i++) {
-    let num = Number(unitVal[i]);
+    let num = parseInt(unitVal[i]);
     unitNum.push(num); 
   }//converts all the course unit arrays to an array of numbers just to be safe
   
@@ -82,8 +88,8 @@ calcBtn.addEventListener('click', () => {
   let gpa = numeratorTotal / unitTotal;//calculate final gp score
   
   let gp = gpa.toFixed(2);//rounds it up to 2 decimal places
-
-  if (gp !== NaN){
+  console.log(gp);
+  if (!(isNaN(gp))){
     if (gp >= 4.50 && gp <= 5.00) {
       
       return myAlert(gp, 'First Class');
@@ -104,6 +110,8 @@ calcBtn.addEventListener('click', () => {
       return myAlert(gp, 'Pass');
       
     }
+  }else{
+      return errorMsg('all fields correctly', 1);
   }
 });
 
@@ -124,3 +132,24 @@ courseNum.addEventListener('keyup', e => {
     return loopForm();
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
