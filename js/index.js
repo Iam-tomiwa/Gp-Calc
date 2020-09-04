@@ -1,5 +1,5 @@
 ///////////////////
-//I'll just gab all my elements here...
+//I'll just grab all my elements here...
 const intro = document.querySelector('.intro');
 const startBtn = document.querySelector('.start-btn');
 const form = document.querySelector('form');
@@ -15,8 +15,6 @@ const closeBox = document.querySelector('.close');
 const formWrap = document.querySelector('.forms');
 
 /////just a little function to initialise the calculator's forms...
-
-
 errorMsg=(message, i)=>{ 
   let error = document.querySelectorAll('.error-msg')[i];
   error.textContent = `*pls input ${message}`;
@@ -45,7 +43,6 @@ loopForm=()=>{
 
 ////////////////////////////////
 ///main function to calculate gp
-
 myAlert = (gp, nthClass) => {
   gpa.textContent = `You're on ${nthClass} with a GPA of ${gp}!`
   overlay.style.display = 'block';
@@ -53,7 +50,7 @@ myAlert = (gp, nthClass) => {
 }
 
 calcBtn.addEventListener('click', () => {
-  let formArr =  Array.prototype.slice.call(form);//comvert thr form nodelist to sn array  
+  let formArr =  Array.prototype.slice.call(form);//convert the form nodelist to an array  
   let unitVal = [];
   let unitNum = [];
   let gradeVal = [];
@@ -88,7 +85,6 @@ calcBtn.addEventListener('click', () => {
   let gpa = numeratorTotal / unitTotal;//calculate final gp score
   
   let gp = gpa.toFixed(2);//rounds it up to 2 decimal places
-  console.log(gp);
   if (!(isNaN(gp))){
     if (gp >= 4.50 && gp <= 5.00) {
       
@@ -116,8 +112,7 @@ calcBtn.addEventListener('click', () => {
 });
 
 
-newBtn.addEventListener('click', () => window.location.reload(true)
-);
+newBtn.addEventListener('click', () => window.location.reload(true));
 
 closeBox.addEventListener('click', e => {
   overlay.style.display = 'none'
