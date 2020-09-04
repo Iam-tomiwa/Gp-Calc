@@ -329,7 +329,7 @@ footer *{
   }
   nav, .intro, .forms{
     max-width: 700px;
-    margin: 0 auto;  
+    margin: 1rem auto;  
   }
   form{
     display: flex;
