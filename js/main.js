@@ -1,4 +1,4 @@
-///////////////////
+//////////////////
 //I'll just grab all my elements here...
 const intro = document.querySelector('.intro');
 const startBtn = document.querySelector('.start-btn');
