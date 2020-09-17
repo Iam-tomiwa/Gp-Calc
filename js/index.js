@@ -1,4 +1,4 @@
-//////////////////
+///////////////////
 //I'll just grab all my elements here...
 const intro = document.querySelector('.intro');
 const startBtn = document.querySelector('.start-btn');
@@ -50,15 +50,7 @@ myAlert = (gp, nthClass) => {
 }//alertbox!
 
 calcBtn.addEventListener('click', () => {
-<<<<<<< HEAD:js/index.js
   let formArr =  Array.prototype.slice.call(form);//convert the form nodelist to an array  
-=======
-  let formArr =  Array.prototype.slice.call(form);//converts the form nodelist to an array  
-  let unitVal = [];
-  let unitNum = [];
-  let gradeVal = [];
-  let numerator = [];
->>>>>>> e67fd319cc26e6016575c62f91f059e48ad8adbb:js/main.js
   
   let unitVal = formArr
   .filter(input => input.type == 'number')
