@@ -312,7 +312,7 @@ footer *{
     flex-direction: row;
     align-items: center; 
     padding: 3rem;
-    max-height: 600px;
+    max-height: 500px;
     margin-top: 20vh;
   }
   .container{
