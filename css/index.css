@@ -313,7 +313,7 @@ footer * {
     bottom: 0;
     height: 50vh;
     width: 100vw;
-    z-index: -1;
+    z-index: -6;
   }
   footer {
     flex-direction: row;
@@ -334,6 +334,7 @@ footer * {
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: -1;
   }
   .container {
     margin-bottom: 2rem;
