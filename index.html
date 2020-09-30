@@ -1,95 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="A Nigerian website to calculate GPA grade point average based on a 5 point grade system" />
-  <meta name="keywords" content="calculate, GPA, gp, calculator, university, class" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="A Nigerian website to calculate GPA grade point average based on a 5 point grade system"
+    />
+    <meta
+      name="keywords"
+      content="calculate, GPA, gp, calculator, university, class"
+    />
     <meta property="og:title" content="GP Calculator" />
-    <meta property="og:description" content="Calculate your GPA in real time! No stress craming formula." />
+    <meta
+      property="og:description"
+      content="Calculate your GPA in real time! No stress craming formula."
+    />
     <meta property="og:url" content="https://netfinder.vercel.app/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@i_am_ajayii" />
     <meta name="twitter:title" content="GP Calculator" />
-    <meta name="twitter:description" content="Calculate your GPA in real time! No stress craming formula." />
-    <meta name="twitter:image" content="https://gpcalculator.vercel.app/images/home-demo.png" />
+    <meta
+      name="twitter:description"
+      content="Calculate your GPA in real time! No stress craming formula."
+    />
+    <meta
+      name="twitter:image"
+      content="https://gpcalculator.vercel.app/images/home-demo.png"
+    />
     <meta name="twitter:image:alt" content="GpCalc's logo" />
-  <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
-  <link rel="manifest" href="favicon/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
-  <meta name="theme-color" content="#e4bb19">
-  <link rel="canonical" href="https://iam-tomiwa.github.io/Gp-Calc/" />
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" type="text/css" media="all" />
-  <title>GP calc</title>
-</head>
-<body>
-  <nav>
-    <img class="logo" src="images/logo1.png" alt="Gp calc logo" />
-    <a href="#" id="new-btn"><i class="fa fa-home"></i> Home</a>
-  </nav>
-  <div class="container">
-    <div class="wrapper">
-      <div class="intro">
-        <img class="intro-pic" src="images/calc.png" alt="illustration picture for GP calc i.e calculator" />
-        <div class="info">
-        <h1 class="intro-head">Monitor your GPA with <span class="color">GP CALC+</span></h1>
-        <h4>Pls input the number of courses offerred to continue</h4>
-        <div class="num-wrapper">
-          <input type="number" class="course-num" value="" placeholder="Enter no of courses here..."/>
-          <button type="submit" class="start-btn">Start <i class="fa fa-angle-double-right"></i></button>
+    <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png" />
+    <meta name="theme-color" content="#e4bb19" />
+    <link rel="canonical" href="https://iam-tomiwa.github.io/Gp-Calc/" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+      type="text/css"
+      media="all"
+    />
+    <title>GP calc</title>
+  </head>
+  <body>
+    <nav>
+      <img class="logo" src="images/logo1.png" alt="Gp calc logo" />
+      <a href="#" id="new-btn"><i class="fa fa-home"></i> Home</a>
+    </nav>
+    <div class="container">
+      <div class="wrapper">
+        <div class="intro">
+          <img
+            class="intro-pic"
+            src="images/calc.png"
+            alt="illustration picture for GP calc i.e calculator"
+          />
+          <div class="info">
+            <h1 class="intro-head">
+              Monitor your GPA with <span class="color">GP CALC+</span>
+            </h1>
+            <h4>Pls input the number of courses offerred to continue</h4>
+            <div class="num-wrapper">
+              <input
+                type="number"
+                class="course-num"
+                value=""
+                placeholder="Enter no of courses here..."
+              />
+              <button type="submit" class="start-btn">
+                Start <i class="fa fa-angle-double-right"></i>
+              </button>
+            </div>
+            <p class="error-msg"></p>
+          </div>
         </div>
-          <p class="error-msg"></p>
+      </div>
+      <div class="forms">
+        <form method="get" accept-charset="utf-8">
+          <p class="text"></p>
+          <div class="course">
+            <label for="course">Units: </label>
+            <input
+              type="number"
+              name="course"
+              class="course-unit"
+              placeholder="Enter course unit"
+              required="multiple"
+            />
+            <label for="grade">Grade:</label>
+            <select class="grade" name="grade" required="multiple">
+              <option value="5">A</option>
+              <option value="4">B</option>
+              <option value="3">C</option>
+              <option value="2">D</option>
+              <option value="1">E</option>
+              <option value="0">F</option>
+            </select>
+          </div>
+        </form>
+        <p class="error-msg"></p>
+        <div class="btns">
+          <p class="calc">
+            Calculate &ThickSpace; <i class="fas fa-calculator socials"></i>
+          </p>
         </div>
       </div>
     </div>
-    <div class="forms">
-    <form method="get" accept-charset="utf-8">
-      <p class="text"></p>
-      <div class="course">
-          <label for="course">Units: </label>
-          <input type="number" name="course" class="course-unit" placeholder="Enter course unit" required="multiple"/>
-          <label for="grade">Grade:</label>
-          <select class="grade" name="grade" required="multiple">
-            <option value="5">A</option>
-            <option value="4">B</option>
-            <option value="3">C</option>
-            <option value="2">D</option>
-            <option value="1">E</option>
-            <option value="0">F</option>
-          </select>
+    <div class="overlay1"></div>
+    <div class="alert-box">
+      <img src="images/alert.jpg" id="alert-logo" alt="Gp Calc's logo" />
+      <h2 id="gpa"></h2>
+      <h4>Thank you for using Gp Calc+ <i class="fa fa-heart"></i>...</h4>
+      <a href="#" class="close">Close</a>
+    </div>
+    <footer class="footer-1" id="footer">
+      <p>Designed and developed with<i class="fa fa-heart"></i>by Tomiwa</p>
+      <div class="socials">
+        <a href="https://wa.me/+2348154050552"
+          ><i class="fab fa-whatsapp icons"></i
+        ></a>
+        <a href="#"><i class="fab fa-facebook icons"></i></a>
+        <a href="https://github.com/Iam-tomiwa"
+          ><i class="fab fa-github icons"></i
+        ></a>
+        <a href="https://www.twitter.com/I_am_Ajayii/"
+          ><i class="fab fa-twitter icons"></i
+        ></a>
+        <a href="https://www.instagram.com/_micro_dev/"
+          ><i class="fab fa-instagram icons"></i
+        ></a>
       </div>
-    </form>
-    <p class="error-msg"></p>
-    <div class="btns">
-      <p class="calc">Calculate &ThickSpace; <i class="fas fa-calculator socials"></i> </p>
-    </div>
-    </div>
-  </div>
-  <div class="overlay1"></div>
-  <div class="alert-box">
-    <img src="images/alert.jpg" id="alert-logo" alt="Gp Calc's logo">
-    <h2 id="gpa"></h2>
-    <h4>Thank you for using Gp Calc+ <i class="fa fa-heart"></i>...</h4>
-    <a href="#" class="close">Close</a>
-  </div>
-  <footer class="footer-1" id="footer">
-    <p>Designed and developed with<i class="fa fa-heart"></i>by Tomiwa</p>
-    <div class="socials">
-      <a href="https://wa.me/+2348154050552"><i class="fab fa-whatsapp icons"></i></a>
-      <a href="#"><i class="fab fa-facebook icons"></i></a>
-      <a href="https://github.com/Iam-tomiwa"><i class="fab fa-github icons"></i></a>
-      <a href="https://www.twitter.com/I_am_Ajayii/"><i class="fab fa-twitter icons"></i></a>
-      <a href="https://www.instagram.com/_micro_dev/"><i class="fab fa-instagram icons"></i></a>  
-    </div>
-    <p>&copy; 2020 | GP Calc+</p>
-  </footer> 
-  <script src="js/index.js"></script>
-</body>
+      <p>&copy; 2020 | GP Calc+</p>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
 </html>
