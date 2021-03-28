@@ -126,6 +126,7 @@ span {
   color: var(--sec-color);
   border: none;
   width: 30%;
+  padding: 0.5rem;
 }
 label {
   margin-right: 1rem;
@@ -159,17 +160,9 @@ label {
   border-radius: 5px;
   margin: 0.5rem 0;
   padding: 0.5rem 1rem;
-  animation: error 8s ease-in-out forwards;
   display: none;
 }
-@keyframes error {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
+
 .overlay1 {
   display: none;
   background: rgba(0, 0, 0, 0.6);

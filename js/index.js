@@ -17,14 +17,17 @@ const formWrap = document.querySelector(".forms");
 /////just a little function to initialise the calculator's forms...
 errorMsg = (message, i) => {
   let error = document.querySelectorAll(".error-msg")[i];
-  error.textContent = `*pls input ${message}`;
+  error.textContent = `${message}`;
   error.style.display = "block";
+  setTimeout(() => {
+    error.style.display = "none";
+  }, 4500);
 };
 
 loopForm = () => {
   let welcome = document.querySelector(".text");
   let courseNumber = Number(courseNum.value);
-  if (courseNumber > 0) {
+  if (courseNumber > 0 && courseNumber <= 15) {
     intro.style.display = "none";
     formWrap.style.cssText = "transform: translatex(0vw); transition: 1s;";
     welcome.textContent = `Hi there!, You have ${courseNumber} course forms here, pls input all your course units and grades before procceeding to calculate.`;
@@ -36,9 +39,12 @@ loopForm = () => {
       let footer = document.querySelector("footer");
       footer.style.margin = "40vh 0 0 0";
     }
+  } else if (courseNumber > 14) {
+    errorMsg("Course limit exceeded", 0);
   } else {
-    errorMsg("a valid number", 0);
+    errorMsg("*pls input a valid number", 0);
   }
+  courseNum.value = "";
 };
 
 ////////////////////////////////
@@ -53,14 +59,14 @@ calcBtn.addEventListener("click", () => {
   let formArr = Array.prototype.slice.call(form); //convert the form nodelist to an array
 
   let unitVal = formArr
-    .filter((input) => input.type == "number")
-    .map((val) => parseInt(val.value)); //get all the values of the course units and push them into an array
+    .filter(input => input.type == "number")
+    .map(val => parseInt(val.value)); //get all the values of the course units and push them into an array
 
   let unitTotal = unitVal.reduce((a, b) => a + b, 0); //sums up the array i created
 
   let gradeVal = formArr
-    .filter((input) => input.type == "select-one")
-    .map((val) => parseInt(val.value));
+    .filter(input => input.type == "select-one")
+    .map(val => parseInt(val.value));
   //get all the values of the grade options and push them into an array
 
   let numerator = [];
@@ -94,14 +100,14 @@ calcBtn.addEventListener("click", () => {
 
 newBtn.addEventListener("click", () => window.location.reload(true));
 
-closeBox.addEventListener("click", (e) => {
+closeBox.addEventListener("click", e => {
   overlay.style.display = "none";
   alertBox.style.display = "none";
 });
 
 startBtn.addEventListener("click", loopForm);
 
-courseNum.addEventListener("keyup", (e) => {
+courseNum.addEventListener("keyup", e => {
   if (event.keyCode === 13) {
     event.preventDefault();
     return loopForm();
